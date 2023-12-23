@@ -41,7 +41,7 @@ export default function MainNavbar() {
     <nav>
       <div className="navbar bg-neutral">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl text-neutral-content">
+          <a className="btn btn-ghost text-3xl text-neutral-content">
             Ryu
           </a>
         </div>
