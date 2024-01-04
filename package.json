@@ -6,23 +6,39 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
-    "next": "latest",
+    "next": "^14.0.4",
     "react": "latest",
     "react-dom": "latest",
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/addon-styling-webpack": "^0.0.6",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/nextjs": "^7.6.7",
+    "@storybook/react": "^7.6.7",
+    "@storybook/test": "^7.6.7",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "css-loader": "^6.8.1",
     "daisyui": "^3.8.0",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "eslint-plugin-storybook": "^0.6.15",
     "postcss": "latest",
+    "postcss-loader": "^7.3.4",
+    "storybook": "^7.6.7",
+    "style-loader": "^3.3.3",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
