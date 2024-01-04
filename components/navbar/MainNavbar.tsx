@@ -2,31 +2,9 @@
  
 import { usePathname } from 'next/navigation'
 
-export default function MainNavbar() {
+export default function MainNavbar({ brandName, navItems }) {
   const pathname = usePathname();
-  const nav = [
-    {
-      label: "Página inicial",
-      link: "/"
-    },
-    {
-      label: "Aprendizado",
-      link: "/aprendizado"
-    },
-    {
-      label: "Projetos",
-      link: "/projetos"
-    },
-    {
-      label: "Sobre",
-      link: "/sobre"
-    },
-    {
-      label: "Contato",
-      link: "Contato"
-    }
-  ];
-  const navbar = nav.map( (item) => (pathname == item.link?<li key={item.link} className="disabled">
+  const navbar = navItems.map( (item) => (pathname == item.link?<li key={item.link} className="disabled">
         <a href="#" className="text-accent">
           {item.label}
         </a>
@@ -42,7 +20,7 @@ export default function MainNavbar() {
       <div className="navbar bg-neutral">
         <div className="flex-1">
           <a className="btn btn-ghost text-3xl text-neutral-content">
-            Ryu
+            { brandName }
           </a>
         </div>
         <div className="flex-none">
