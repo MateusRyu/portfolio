@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import MainNavbar from '@/components/navbar/MainNavbar'
+import MainNavbar from '@/components/navbar/Header'
 import MainFooter from '@/components/footer/MainFooter'
 
 const navItems = [
