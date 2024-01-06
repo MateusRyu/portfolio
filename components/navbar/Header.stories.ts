@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Mobile: Story = {
+export const Dark: Story = {
   args: {
     brandName: 'Brand Name',
     navItems: [
