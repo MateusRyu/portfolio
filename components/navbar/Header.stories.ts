@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@Storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import Header from './Header';
 import { HeaderProps, Item } from './Header';
