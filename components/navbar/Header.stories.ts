@@ -16,8 +16,9 @@ export const Dark: Story = {
   args: {
     brandName: 'Brand Name',
     navItems: [
-      {label: 'link 1', link: '#1'},
-      {label: 'link 2', link: '#2'}
+      {label: 'Active', link: "#0", active: true},
+      {label: 'link 1', link: '#1', active: false},
+      {label: 'link 2', link: '#2', active: false}
     ]
   },
 };
