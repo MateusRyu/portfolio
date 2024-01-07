@@ -30,6 +30,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "chromatic": "^10.2.0",
     "css-loader": "^6.8.1",
     "daisyui": "^3.8.0",
     "eslint": "latest",
@@ -41,5 +42,7 @@
     "style-loader": "^3.3.3",
     "tailwindcss": "latest",
     "typescript": "latest"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "portfolio@0.1.0"
 }
