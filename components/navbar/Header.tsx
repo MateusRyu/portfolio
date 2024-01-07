@@ -52,7 +52,7 @@ export default function Header({ brandName, navItems }: HeaderProps) {
           <Close color="white" className={isClose?"hidden":"block"} />
         </button>
       </nav>
-      <nav>
+      <nav aria-label="mobile">
         <ul className={isClose?"hidden":"flex flex-col md:hidden border-b-2 border-primary"}>
           {navbar}
         </ul>
