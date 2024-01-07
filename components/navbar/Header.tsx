@@ -33,7 +33,7 @@ export default function Header({ brandName, navItems }: HeaderProps) {
   }
 
   const navbar = navItems.map((item) => (
-    <NavItem href={item.link} active={item.active}>
+    <NavItem key={item.link} href={item.link} active={item.active}>
       {item.label}
     </NavItem>
   )); 
