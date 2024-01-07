@@ -34,3 +34,29 @@ export const Active: Story = {
     children: 'Active'
   }
 }
+
+export const Mobile: Story = {
+  args: {
+    href: '#',
+    active: false,
+    children: 'Mobile default'
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'sm'
+    }
+  }
+}
+
+export const MobileActive: Story = {
+  args: {
+    href: '#',
+    active: true,
+    children: 'Mobile default'
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: 'sm'
+    }
+  }
+}
