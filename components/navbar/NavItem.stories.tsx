@@ -5,13 +5,19 @@ import { NavItemProps } from './NavItem';
 
 const meta: Meta = {
   title: 'Components/navbar/NavItem',
-  component: NavItem
+  component: NavItem,
+  decorators: [
+    (Story) => (
+      <ul>
+        {Story()}
+      </ul>
+    )
+  ]
 };
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
 
 export const Default: Story = {
   args: {
@@ -19,13 +25,6 @@ export const Default: Story = {
     active: false,
     children: 'Default'
   },
-  decorators: [
-    (Story) => (
-      <ul>
-        {Story()}
-      </ul>
-    )
-  ]
 };
 
 export const Active: Story = {
@@ -33,12 +32,5 @@ export const Active: Story = {
     href: '#',
     active: true,
     children: 'Active'
-  },
-  decorators: [
-    (Story) => (
-      <ul>
-        {Story()}
-      </ul>
-    )
-  ]
+  }
 }
