@@ -12,13 +12,24 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
-  args: {
-    brandName: 'Brand Name',
-    navItems: [
-      {label: 'Active', link: "#0", active: true},
-      {label: 'link 1', link: '#1', active: false},
-      {label: 'link 2', link: '#2', active: false}
-    ]
-  },
+const defaultArgs = {
+  brandName: 'Brand Name',
+  navItems: [
+    {label: 'Active', link: "#0", active: true},
+    {label: 'link 1', link: '#1', active: false},
+    {label: 'link 2', link: '#2', active: false}
+  ]
+}
+
+export const Default: Story = {
+  args: defaultArgs
+}
+
+export const Mobile: Story = {
+  args: defaultArgs,
+  parameters: {
+    viewport: {
+      defaultViewport: 'sm'
+    }
+  }
 };
