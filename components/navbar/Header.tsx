@@ -1,5 +1,6 @@
 'use client'
 import {useState} from 'react';
+import { usePathname } from 'next/navigation';
 
 import Close from '../icons/Close';
 import Hamburger from '../icons/Hamburger';
@@ -8,7 +9,7 @@ import NavItem from './NavItem';
 export type Item = {
   label: string;
   link: string;
-  active: boolean
+  active?: boolean
 };
 
 export type HeaderProps = {
@@ -21,6 +22,16 @@ export default function Header({ brandName, navItems }: HeaderProps) {
   const toggleMenu = () => {
     setIsClose(!isClose);
   };
+  const pathname = usePathname();
+
+  for (let i = 0; i < navItems.length; i++) {
+    if (navItems[i].active || pathname === navItems[i].link) {
+      navItems[i].active = true;
+    } else {
+      navItems[i].active = false;
+    }
+  }
+
   const navbar = navItems.map((item) => (
     <NavItem href={item.link} active={item.active}>
       {item.label}
