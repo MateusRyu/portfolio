@@ -1,11 +1,8 @@
 import { IconProps } from "./IconProps";
+import { IconSizes } from "./IconSizes";
 
 function Hamburger({color, className="", size="normal"}: IconProps) {
-  const sizes = {
-    normal: {width: 20, height: 20},
-    small: {width: 16, height: 16}
-  };
-  const {width, height} = sizes[size];
+  const {width, height} = IconSizes[size];
 
   return (
     <svg 
