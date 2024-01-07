@@ -1,16 +1,17 @@
 'use client'
-import { usePathname } from 'next/navigation';
 import {useState} from 'react';
 
 import Close from '../icons/Close';
 import Hamburger from '../icons/Hamburger';
+import NavItem from './NavItem';
 
-export interface Item {
+export type Item = {
   label: string;
   link: string;
+  active: boolean
 };
 
-export interface HeaderProps {
+export type HeaderProps = {
   brandName: string;
   navItems: Item[];
 };
@@ -20,17 +21,11 @@ export default function Header({ brandName, navItems }: HeaderProps) {
   const toggleMenu = () => {
     setIsClose(!isClose);
   };
-  const pathname = usePathname();
-  const navbar = navItems.map( (item) => (pathname == item.link?<li key={item.link} className="disabled w-full">
-        <a href="#" className="bg-accent-content text-accent">
-          {item.label}
-        </a>
-      </li>:<li key={item.link} className="flex"> 
-        <a href={item.link} className="px-4 w-full hover:bg-primary hover:text-primary-content text-neutral-content md:hover:bg-neutral md:hover:text-primary border-t-2 border-neutral-content md:border-t-0">
-          {item.label}
-        </a>
-      </li>
-  ))
+  const navbar = navItems.map((item) => (
+    <NavItem href={item.link} active={item.active}>
+      {item.label}
+    </NavItem>
+  )); 
 
   return (
     <header className="bg-neutral py-0 px-0">

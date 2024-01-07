@@ -1,17 +1,18 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { usePathname } from 'next/navigation';
 import MainNavbar from '@/components/navbar/Header'
 import MainFooter from '@/components/footer/MainFooter'
 
+const pathname = usePathname();
 const navItems = [
   {
     label: "Página inicial",
-    link: "/"
+    link: "/",
   },
   {
     label: "Aprendizado",
-    link: "/aprendizado"
+    link: "/aprendizado",
   },
   {
     label: "Projetos",
@@ -26,6 +27,14 @@ const navItems = [
     link: "Contato"
   }
 ];
+
+for (let i=0; i <navItems.length; i++) {
+  if (pathname === navItems[i].link) {
+    navItems[i].active = true;
+  } else {
+    navItems[i].active = false;
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Portfólio do Ryu',
