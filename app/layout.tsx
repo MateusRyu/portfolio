@@ -1,7 +1,8 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import MainNavbar from '@/components/navbar/Header'
-import MainFooter from '@/components/footer/MainFooter'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Body, Heading } from "@/components/Fonts/fonts";
+import MainNavbar from "@/components/navbar/Header";
+import MainFooter from "@/components/footer/MainFooter";
 
 const navItems = [
   {
@@ -14,36 +15,36 @@ const navItems = [
   },
   {
     label: "Projetos",
-    link: "/projetos"
+    link: "/projetos",
   },
   {
     label: "Sobre",
-    link: "/sobre"
+    link: "/sobre",
   },
   {
     label: "Contato",
-    link: "Contato"
-  }
+    link: "Contato",
+  },
 ];
 
 export const metadata: Metadata = {
-  title: 'Portfólio do Ryu',
-  description: 'Ryu é um desenvolvedor Full-Stack ansioso para solucionar problemas!',
-}
+  title: "Portfólio do Ryu",
+  description:
+    "Ryu é um desenvolvedor Full-Stack ansioso para solucionar problemas!",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
- 
   return (
     <html lang="pt-BR" data-theme="synthwave">
-      <body className='flex flex-col'>
-        <MainNavbar brandName='Ryu' navItems={ navItems }/>
+      <body className={`flex flex-col ${Body.variable} ${Heading.variable}`}>
+        <MainNavbar brandName="Ryu" navItems={navItems} />
         {children}
-        <MainFooter/>
+        <MainFooter />
       </body>
     </html>
-  )
+  );
 }

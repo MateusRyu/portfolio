@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .frame {
   border: 4px solid theme(colors.primary);
-  box-shadow: 4px 4px 0px 0px theme(colors.accent), 8px 8px 0px 0px theme(colors.secondary);
+  box-shadow: 4px 4px 0px 0px theme(colors.accent),
+    8px 8px 0px 0px theme(colors.secondary);
 }
 
 body {
-    font-family: 'VT323', "Lucida Console", "Courier New", monospace;
+  font-family: var(--font-heading), "Lucida Console", "Courier New", monospace;
 }
 
 p {
-    font-family: "Lucida Console", "Courier New", monospace;
+  font-family: var(--font-heading), "Courier New", monospace;
 }
 
 h1 {
   font-size: 68px;
-  line-height: 72px;  
+  line-height: 72px;
 }
 
 h2 {
