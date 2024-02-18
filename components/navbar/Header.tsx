@@ -45,9 +45,19 @@ export default function Header({ brandName, navItems }: HeaderProps) {
           {brandName}
         </a>
         <ul className="hidden md:flex flex-row gap-4 px-1">{navbar}</ul>
-        <button className="md:hidden btn btn-ghost" onClick={toggleMenu}>
-          <Hamburger color="white" className={isClose ? "block" : "hidden"} />
-          <Close color="white" className={isClose ? "hidden" : "block"} />
+        <button
+          className="md:hidden btn btn-ghost"
+          aria-label="Menu de navegação"
+          onClick={toggleMenu}
+        >
+          <div className={isClose ? "block" : "hidden"}>
+            <Hamburger color="white" />
+            <span className="sr-only">Abrir menu</span>
+          </div>
+          <div className={isClose ? "hidden" : "block"}>
+            <Close color="white" />
+            <span className="sr-only">Fechar menu</span>
+          </div>
         </button>
       </nav>
       <nav aria-label="mobile">
