@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Body, Heading } from "@/components/Fonts/fonts";
+import { Primary, Secondary } from "@/components/typography/Typefaces";
 import MainNavbar from "@/components/navbar/Header";
 import MainFooter from "@/components/footer/MainFooter";
 
@@ -40,7 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" data-theme="synthwave">
-      <body className={`flex flex-col ${Body.variable} ${Heading.variable}`}>
+      <body
+        className={`flex flex-col ${Primary.variable} ${Secondary.variable}`}
+      >
         <MainNavbar brandName="Ryu" navItems={navItems} />
         {children}
         <MainFooter />
