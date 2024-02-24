@@ -5,7 +5,7 @@ export const Primary = Press_Start_2P({
   style: ["normal"],
   subsets: ["latin", "latin-ext"],
   display: "auto",
-  variable: "--font-body",
+  variable: "--font-primary",
 });
 
 export const Secondary = VT323({
@@ -13,5 +13,5 @@ export const Secondary = VT323({
   style: ["normal"],
   subsets: ["latin", "latin-ext"],
   display: "auto",
-  variable: "--font-heading",
+  variable: "--font-secondary",
 });
