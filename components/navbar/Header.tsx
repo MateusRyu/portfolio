@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Close from "../icons/Close";
 import Hamburger from "../icons/Hamburger";
 import NavItem from "./NavItem";
+import H2 from "../typography/headings/H2";
 
 export type Item = {
   label: string;
@@ -42,7 +43,7 @@ export default function Header({ brandName, navItems }: HeaderProps) {
     <header className="bg-neutral py-0 px-0">
       <nav className="w-full flex flex-row items-center justify-between px-4 md:px-8 lg:px-12">
         <a className="text-3xl text-neutral-content" href="/">
-          {brandName}
+          <H2>{brandName}</H2>
         </a>
         <ul className="hidden md:flex flex-row gap-4 px-1">{navbar}</ul>
         <button
