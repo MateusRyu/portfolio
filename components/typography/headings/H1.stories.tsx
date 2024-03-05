@@ -1,24 +1,22 @@
-import type { StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import H1 from "./H1";
 import {
-  meta,
   AllProps,
   BasicProps,
   BasicPropsWithClassName,
   BasicPropsWithID,
-} from "./HeadingPropsAndMeta";
+} from "./HeadingProps";
 
-const Meta = {
-  ...meta,
+const meta: Meta<typeof H1> = {
   title: "Components/Typography/H1",
   component: H1,
   tags: ["autodocs"],
 };
 
-export default Meta;
+export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof H1>;
 
 export const Default: Story = {
   args: BasicProps,
