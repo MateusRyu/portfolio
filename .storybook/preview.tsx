@@ -1,6 +1,8 @@
 import type { Preview } from "@storybook/react";
+import React from "react";
 
 import "../app/globals.css";
+import { Primary } from "../components/typography/Typefaces";
 
 const customViewports = {
   xs: {
@@ -48,13 +50,13 @@ const customViewports = {
 };
 
 const preview: Preview = {
-  // decorators: [
-  //   (Story) => (
-  //     <div className={`${Primary.variable}`}>
-  //       <Story />
-  //     </div>
-  //   ),
-  // ],
+  decorators: [
+    (Story) => (
+      <div className={`bg-neutral ${Primary.variable}`}>
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
