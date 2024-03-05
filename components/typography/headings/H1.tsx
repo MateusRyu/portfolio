@@ -1,5 +1,5 @@
 import Heading from "./Heading";
-import { HeadingProps } from "./HeadingPropsAndMeta";
+import { HeadingProps } from "./HeadingProps";
 
 export default function H1({ className, children, id }: HeadingProps) {
   return (
