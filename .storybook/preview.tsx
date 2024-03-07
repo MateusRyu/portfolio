@@ -2,7 +2,7 @@ import type { Preview } from "@storybook/react";
 import React from "react";
 
 import "../app/globals.css";
-import { Primary } from "../components/typography/Typefaces";
+import { Primary, Secondary } from "../components/typography/Typefaces";
 
 const customViewports = {
   xs: {
@@ -52,7 +52,7 @@ const customViewports = {
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <div className={`bg-neutral ${Primary.variable}`}>
+      <div className={`bg-neutral ${Primary.variable} ${Secondary.variable} p-1`}>
         <Story />
       </div>
     ),
